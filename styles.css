@@ -1,0 +1,14 @@
+*{
+    outline: 1px solid red;
+}
+
+body, html {
+    min-height: 100vh;
+    min-width: 50vw;
+}
+
+.board-square-custom{
+    width: 100px;
+    height: 100px;
+   
+}
