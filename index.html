@@ -9,7 +9,57 @@
 </head>
 
 <body>
+    <!-- Modal -->
 
+    <div class="custom-modal" id="victory-modal">
+       <div class="custom-modal-window">
+           <div class="custom-modal-window-header">
+           <span>Game over</span>
+           </div>
+           <div class="custom-modal-window-body">
+            <h5><span id="winner-text">Player 1</span> won!</h5>
+           </div>
+           
+           <div class="custom-modal-window-footer">
+            <button id="modal-play"> Play Again</button>
+            <button id="modal-cancel">Cancel</button>
+           </div>
+       </div>
+    </div>
+
+
+
+    <div class="custom-modal custom-modal__new-game" id="new-game-modal">
+        <div class="custom-modal-window">
+            <div class="custom-modal-window-header">
+            <span>New Game</span>
+            </div>
+            <div class="custom-modal-window-body__new-game">
+                <div>
+                    <span>Type the players names</span>
+                </div>
+
+                <div>
+                    <label for="">Player 1:</label>
+                    <input type="text" id="player_1_name-input">
+                </div>
+                <div>
+                    <label for="">Player 2:</label>
+                    <input type="text" id="player_2_name-input">
+                </div>
+
+
+            </div>
+            
+            <div class="custom-modal-window-footer">
+             <button id="modal-start"> Play</button>
+            
+            </div>
+        </div>
+     </div>
+ 
+
+  
     <div class="contaner-fluid">
         <div class="row">
             <div class="col">
@@ -20,11 +70,12 @@
         <div class="row">
             <div class="col">
                 <h3>Player 1:</h3>
+                <h5 id="player_1_name"> Player 1</h5>
                 
             </div>
             <div class="col">
                 <h3>Player 2:</h3>
-                
+                <h5 id="player_2_name"> Player 2</h5>
             </div>
         </div>
 
@@ -54,6 +105,8 @@
 
 
     </div>
+
+    <script src="main.js"> </script>
     
 </body>
 </html>
