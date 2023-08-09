@@ -32,12 +32,15 @@ const Game = (() => {
 
         const setWinner = (player) =>{
             let winnerText = document.querySelector("#winner-text")
-            winnerText.innerText = player
+            winnerText.innerText = player + " " + "wins!"
         };
 
-        
+        const setDrawMessage = () =>{
+            let drawText = document.querySelector("#winner-text")
+            drawText.innerText = "Its a draw!"
+        }
     
-        return { victoryModal, playModal, setWinner };
+        return { victoryModal, playModal, setWinner, setDrawMessage };
     
     })();
     
@@ -77,6 +80,18 @@ const Game = (() => {
             return false;
         }
 
+
+
+        function CheckDraw(){
+            if (CheckWin()){
+                return false
+            } else if (!Board.some( (square)=> square == "-" )) {
+                return true
+            }
+        }
+
+
+
         function ValidMove(position) {
         if (Board[position - 1] == "-") {
             
@@ -93,13 +108,21 @@ const Game = (() => {
             
 
             if (CheckWin()){
+                //Winning condition
                 console.log("Winner!")
                 DisableSquares()
                 DisplayAux.setWinner(current_player.name)
                 DisplayAux.victoryModal()
+            
+            }else if(CheckDraw()){
+                console.log("Draw!")
+                DisableSquares()
+                DisplayAux.setDrawMessage()
+                DisplayAux.victoryModal()
+
             } else{ 
                 current_player = TicTacToeBoard.getCurrentPlayer() == players.player_1 ? players.player_2 : players.player_1;
-                TicTacToeBoard.setCurrentPlayer(current_player); // Set the new current player
+                TicTacToeBoard.setCurrentPlayer(current_player); // 
 
             }
         }
