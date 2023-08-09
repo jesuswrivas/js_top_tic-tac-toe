@@ -1,15 +1,22 @@
-*{
+/* *{
     outline: 1px solid red;
-}
+} */
 
 body, html {
     min-height: 100vh;
     min-width: 50vw;
+    background-color: #E3E6E6;
 }
 
 .board-square-custom{
-    width: 100px;
+    width: 200px;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #232F3E;
+    
    
 }
 
@@ -41,7 +48,9 @@ Modal Styling */
     min-width: 250px;
     position: relative;
     background-color: #fefefe;
-    margin: 30% auto;
+    margin: 15% auto;
+    border: 1px solid black;
+  
     
 
 }

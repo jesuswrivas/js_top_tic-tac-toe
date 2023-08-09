@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <!-- Modal -->
+<body class="d-flex justify-content-center align-items-center">
 
-    <div class="custom-modal" id="victory-modal">
+
+        <div class="custom-modal" id="victory-modal">
        <div class="custom-modal-window">
-           <div class="custom-modal-window-header">
+           <div class="custom-modal-window-header bg-primary-subtle">
            <span>Game over</span>
            </div>
            <div class="custom-modal-window-body">
@@ -21,8 +21,8 @@
            </div>
            
            <div class="custom-modal-window-footer">
-            <button id="modal-play"> Play Again</button>
-            <button id="modal-cancel">Cancel</button>
+            <button class="btn btn-primary" id="modal-play"> Play Again</button>
+            <button class="btn btn-secondary" id="modal-cancel">Cancel</button>
            </div>
        </div>
     </div>
@@ -31,7 +31,7 @@
 
     <div class="custom-modal custom-modal__new-game" id="new-game-modal">
         <div class="custom-modal-window">
-            <div class="custom-modal-window-header">
+            <div class="custom-modal-window-header bg-primary-subtle">
             <span>New Game</span>
             </div>
             <div class="custom-modal-window-body__new-game">
@@ -52,7 +52,7 @@
             </div>
             
             <div class="custom-modal-window-footer">
-             <button id="modal-start"> Play</button>
+             <button class="btn btn-primary" id="modal-start"> Play</button>
             
             </div>
         </div>
@@ -60,41 +60,41 @@
  
 
   
-    <div class="contaner-fluid">
-        <div class="row">
-            <div class="col">
-                <h1>Tic Tac Toe</h1>
+    <div class="contaner-fluid ">
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h3>Player 1:</h3>
-                <h5 id="player_1_name"> Player 1</h5>
-                
-            </div>
-            <div class="col">
-                <h3>Player 2:</h3>
-                <h5 id="player_2_name"> Player 2</h5>
+        <div class="row text-center bg-dark bg-opacity-75 w-100 g-0 border">
+            <div class="col border">
+                <h1 class="text-white">Tic Tac Toe</h1>
             </div>
         </div>
 
-        <div class="row d-flex justify-content-center">
-            <div class="col-6">
+        <div class="row g-0 bg-body border">
+            <div class="col-12 col-md-6 border p-3">
+                <h3 class="text-center text-md-start">Player 2:</h3>
+                <h5 class="text-center" id="player_1_name"> Player 1</h5>
+            </div >
+            <div class="col-12 col-md-6 border p-3">
+                <h3 class="text-center text-md-start">Player 1:</h3>
+                <h5 class="text-center" id="player_2_name"> Player 2</h5>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center p-5 g-0 bg-body border">
+            <div class="col-12 col-md-6">
                 <div class="container ">
                     <div class="row">
                         <div class="col board-square-custom" id="square_1"></div>
-                        <div class="col board-square-custom" id="square_2"></div>
+                        <div class="col board-square-custom border border-top-0 border-bottom-0" id="square_2"></div>
                         <div class="col board-square-custom" id="square_3"></div>
                     </div>
                     <div class="row">
-                        <div class="col board-square-custom" id="square_4"></div>
-                        <div class="col board-square-custom" id="square_5"></div>
-                        <div class="col board-square-custom" id="square_6"></div>
+                        <div class="col board-square-custom border border-start-0 border-end-0" id="square_4"></div>
+                        <div class="col board-square-custom border" id="square_5"></div>
+                        <div class="col board-square-custom border border-end-0 border-start-0" id="square_6"></div>
                     </div>
                     <div class="row">
                         <div class="col board-square-custom" id="square_7"></div>
-                        <div class="col board-square-custom" id="square_8"></div>
+                        <div class="col board-square-custom border border-bottom-0 border-top-0" id="square_8"></div>
                         <div class="col board-square-custom" id="square_9"></div>
                     </div>
                     
